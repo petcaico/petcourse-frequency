@@ -1,6 +1,7 @@
 import gdown
 import os
 from typing import List, Union, Any
+from services.configure import process_atas
 
 def get_frequency(url: str, out_csv: str):
     try:
@@ -19,6 +20,11 @@ def get_frequency(url: str, out_csv: str):
                 if "fulano" in file.lower():
                     walk_file: str = os.path.join(name_path, file)
                     os.remove(walk_file)
+            
+            try:
+                process_atas(path=name_path, out_csv=out_csv)
+            except Exception as e:
+                raise ValueError(" ❌ [!] Erro ao gerar arquivo CSV.")
 
         else:
             raise ValueError(" ❌ [!] Lista de ATAS indisponível.")
