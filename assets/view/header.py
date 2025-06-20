@@ -7,7 +7,7 @@ def header():
         os.system("clear")
 
     print("╔══════════════════════════════════════════════════════╗")
-    print("║                 🗂️  GERENCIAMENTO DE ATAS             ║")
+    print("║                  GERENCIAMENTO DE ATAS               ║")
     print("║     Processamento automático de frequência PET       ║")
     print("╠══════════════════════════════════════════════════════╣")
     print("║ [1] ➜  Com link de compartilhamento (Google Drive)   ║")

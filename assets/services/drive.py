@@ -16,10 +16,10 @@ def get_frequency(url: str, out_csv: str):
             try:
                 process_atas(path=name_path, out_csv=out_csv)
             except Exception as e:
-                raise ValueError(" ❌ [!] Erro ao gerar arquivo CSV.")
+                raise ValueError(" [!] Erro ao gerar arquivo CSV.")
 
         else:
-            raise ValueError(" ❌ [!] Lista de ATAS indisponível.")
+            raise ValueError(" [!] Lista de ATAS indisponível.")
 
     except Exception as e:
-        raise RuntimeError(f"❌ [!] Erro ao baixar arquivos do Google Drive: {e}")    
+        raise RuntimeError(f" [!] Erro ao baixar arquivos do Google Drive: {e}")    
