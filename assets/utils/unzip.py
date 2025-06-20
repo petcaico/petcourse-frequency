@@ -1,5 +1,5 @@
 import zipfile
-from services.configure import process_atas
+from ..services.configure import process_atas
 
 def unzip_path(path, out_csv) -> bool:
     try:

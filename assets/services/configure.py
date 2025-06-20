@@ -2,7 +2,7 @@ import zipfile
 import csv
 from lxml import etree
 import os
-from utils.dates import extract_date_from_name
+from ..utils.dates import extract_date_from_name
 
 NS = {"w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"}
 

@@ -1,7 +1,7 @@
 import gdown
 import os
 from typing import List, Union, Any
-from services.configure import process_atas
+from .configure import process_atas
 
 def get_frequency(url: str, out_csv: str):
     try:

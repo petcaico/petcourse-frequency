@@ -1,6 +1,6 @@
 import os
 
-def cabecalho():
+def header():
     if os.name == "nt":
         os.system("cls")
     else:
