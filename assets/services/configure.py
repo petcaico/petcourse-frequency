@@ -47,17 +47,13 @@ def process_atas(path, out_csv) -> None:
                     "Status": status,
                     "Data": date_ata}
                 )
-
-            print(f"📄 Processando arquivo: {file}")
-            print(f"📅 Data extraída: {date_ata}")
-            print(f"👥 Frequências encontradas: {len(frequency)} pessoas")
     
     with open(out_csv, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["Nome", "Status", "Data"])
         writer.writeheader()
         writer.writerows(data)
 
-    print(f"✅ CSV gerado com sucesso: {out_csv}")
+    print(f"-> CSV gerado com sucesso: {out_csv}")
 
 if __name__ == "__main__":
     process_atas("6 - Junho", "frequencia.csv")

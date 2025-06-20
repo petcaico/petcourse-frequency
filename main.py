@@ -13,10 +13,10 @@ def create_excel(out_csv):
         with pd.ExcelWriter(f"PET_Frequencias_{date.today().strftime('%d-%m-%Y')}.xlsx") as writer:
             adjust_df.to_excel(writer, sheet_name="Frequencias")
 
-        print("✅ Planilha Excel criada com sucesso.")
+        print("-> Planilha Excel criada com sucesso.")
 
     except Exception as e:
-        print(f"❌ [!] Erro ao criar arquivo Excel: {e}")
+        print(f"[!] Erro ao criar arquivo Excel: {e}")
         exit(1)
 
 
@@ -27,7 +27,7 @@ if __name__ == "__main__":
         mode = ''
         while (mode != '0'):
             header()
-            mode = input();
+            mode = input()
 
             match mode:
                 case '1':
@@ -38,7 +38,7 @@ if __name__ == "__main__":
                         create_excel(out_csv=out_csv)
                         input()
                     except Exception as e:
-                        print(f"❌ [!] Falha ao obter frequências: {e}")
+                        print(f"[!] Falha ao obter frequências: {e}")
                         exit(1)
                 case '2':
                     print("Informe o nome da pasta (sem .zip):")
@@ -50,7 +50,7 @@ if __name__ == "__main__":
                         else:
                             input()
                     except Exception as e:
-                        print(f"❌ [!] Falha ao obter frequências: {e}")
+                        print(f"[!] Falha ao obter frequências: {e}")
                         input()
                 case '0':
                     print("Encerrando o processo. Até mais!")

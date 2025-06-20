@@ -11,11 +11,11 @@ def unzip_path(path, out_csv) -> bool:
             process_atas(path=file_parent, out_csv=out_csv)
         return True
     except FileNotFoundError:
-        print(f"❌ [!] Pasta não encontrada: {path}")
+        print(f"[!] Pasta não encontrada: {path}")
         return False
     except zipfile.BadZipFile:
-        print(f"❌ [!] Arquivo corrompido {path}")
+        print(f"[!] Arquivo corrompido {path}")
         return False
     except Exception as e:
-        print(f"❌ [!] Erro ao descompactar: {e}")
+        print(f"[!] Erro ao descompactar: {e}")
         return False
