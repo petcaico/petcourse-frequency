@@ -1,11 +1,13 @@
 import zipfile
 from ..services.configure import process_atas
+from .files import filter_files
 
 def unzip_path(path, out_csv) -> bool:
     try:
         with zipfile.ZipFile(path, 'r') as zip_ref:
             file_parent = zip_ref.namelist()[0].split('/')[0]
             zip_ref.extractall("./")
+            filter_files(file_parent)
             process_atas(path=file_parent, out_csv=out_csv)
         return True
     except FileNotFoundError:
