@@ -39,7 +39,7 @@ if __name__ == "__main__":
                         input()
                     except Exception as e:
                         print(f"[!] Falha ao obter frequências: {e}")
-                        exit(1)
+                        input()
                 case '2':
                     print("Informe o nome da pasta (sem .zip):")
                     path = input("")
