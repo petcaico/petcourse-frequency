@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
             match mode:
                 case '1':
-                    print("Insira o link do arquivo 'CTRL + SHIFT + V': ")
+                    print("Insira o link do arquivo\n\t'CTRL + SHIFT + V [Linux]\n\t'CTRL + V' [Windows]': ")
                     url = input("")
                     try:
                         get_frequency(url=url, out_csv=out_csv)
